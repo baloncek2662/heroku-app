@@ -1,0 +1,11 @@
+<h1>HOMEPAGE<h1>
+<p>This is your homepage</p><br/>
+{% if users %}
+    <ul>
+    {% for user in users %}
+        <li>{{user}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users are registered.</p>
+{% endif %}

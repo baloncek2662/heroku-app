@@ -1,11 +1,30 @@
-<h1>HOMEPAGE<h1>
-<p>This is your homepage</p><br/>
-{% if users %}
-    <ul>
-    {% for user in users %}
-        <li>{{user}}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No users are registered.</p>
-{% endif %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <div class="col-md-12" align="center">
+            <br/>
+            <h1 style="color: green">HOMEPAGE<h1>
+            <p>This is your homepage</p><br/>
+            {% if users %}
+                <h1>Currently registered users</h3>
+                <ul class="text-left" style="display:inline-block;">
+                {% for user in users %}
+                    <li style="font-size:30px;">{{user}}</li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No users are registered.</p>
+            {% endif %}
+        </div>
+        </br>
+        <div class="col-md-12" align="center">
+            <a href="{% url 'home:register' %}" class="btn btn-success btn-lg col-md-3" role="button">Register here</a>
+        </div>
+    </body>
+</html>

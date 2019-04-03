@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="col-md-12" style="margin-top:1%;">
+            <a href="{% url 'home:index' %}" class="btn btn-info col-md-1" role="button">Back</a>
+        </div>
+        <div class="col-md-12" align="center">
+            <h1 style="color: green">Register<h1>
+            <p>Fill out the forms</p>
+        </div>
+        <form class="col-md-12" align="center">
+            <div class="form-group" align="center">
+                <label for="inputlg">Username</label>
+                <input class="form-control form-control-lg col-md-2" type="text">
+            </div>
+            <div class="form-group" align="center">
+                <label for="inputlg">First Name</label>
+                <input class="form-control form-control-lg col-md-2" type="text">
+            </div>
+            <div class="form-group" align="center">
+                <label for="inputlg">Last Name</label>
+                <input class="form-control form-control-lg col-md-2" type="text">
+            </div>
+        </form>
+        </br>
+        <div class="col-md-12" align="center">
+            <a href=""  class="btn btn-success btn-lg col-md-3" role="button">Register</a>
+        </div>
+    </body>
+</html>

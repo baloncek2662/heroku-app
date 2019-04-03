@@ -14,23 +14,26 @@
             <h1 style="color: green">Register<h1>
             <p>Fill out the forms</p>
         </div>
-        <form class="col-md-12" align="center">
+        <form class="col-md-12" align="center" action="{% url 'home:register_form' %}" method="post">
+            {% csrf_token %}
             <div class="form-group" align="center">
                 <label for="inputlg">Username</label>
-                <input class="form-control form-control-lg col-md-2" type="text">
+                <input class="form-control form-control-lg col-md-2" id="username-input" type="text"
+                    action="{% url 'home:register_form' %}" method="post">
             </div>
             <div class="form-group" align="center">
                 <label for="inputlg">First Name</label>
-                <input class="form-control form-control-lg col-md-2" type="text">
+                <input class="form-control form-control-lg col-md-2" id="first-name-input" type="text"
+                    action="{% url 'home:register_form' %}" method="post">
             </div>
             <div class="form-group" align="center">
                 <label for="inputlg">Last Name</label>
-                <input class="form-control form-control-lg col-md-2" type="text">
+                <input class="form-control form-control-lg col-md-2" id="last-name-input" type="text"
+                    action="{% url 'home:register_form' %}" method="post">
             </div>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+                <input type="submit" value="Vote" class="btn btn-success btn-lg col-md-3" role="button">
         </form>
         </br>
-        <div class="col-md-12" align="center">
-            <a href=""  class="btn btn-success btn-lg col-md-3" role="button">Register</a>
-        </div>
     </body>
 </html>

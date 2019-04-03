@@ -14,3 +14,7 @@ def register(request):
 
 def login(request):
     return HttpResponse("You are at the login page")
+
+def register_form(request):
+    return_message = { 'error_message': "Please fill in all required fields." }
+    return render(request, 'home/register.html', return_message)
